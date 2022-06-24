@@ -82,7 +82,7 @@ function ClienteServico() {
                                         Serviço: {s.servico_nome}
                                     </Card.Text>
                                     <Card.Text>
-                                        Valor: {s.servico_valor}
+                                        R${s.servico_valor}
                                     </Card.Text>
                                     <Card.Text>
                                         <Button onClick={() => deletar(s.servico_id)}>Deletar</Button>

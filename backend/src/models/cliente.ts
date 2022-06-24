@@ -21,7 +21,8 @@ export class cliente {
     cliente_nome!: String
 
     @Column({
-        type: "varchar"
+        type: "varchar",
+        nullable: true
     })
     cliente_nomeSocial!: String
     @CreateDateColumn({

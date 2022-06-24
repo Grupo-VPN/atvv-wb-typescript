@@ -80,7 +80,7 @@ function ClienteProduto() {
                                 <Card.Header> Produto: {s.produto_nome}</Card.Header>
                                 <Card.Body>
                                     <Card.Text>
-                                        Valor: {s.produto_valor}
+                                        R${s.produto_valor}
                                     </Card.Text>
                                     <Card.Text>
                                         <Button onClick={() => deletar(s.produto_id)}>Deletar</Button>
