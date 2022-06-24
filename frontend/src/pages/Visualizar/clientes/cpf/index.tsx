@@ -66,6 +66,7 @@ function EditarCPF() {
                         <input type="date" defaultValue={cliente?.cpf.cpf_dataEmissao} required {...register('cpf_dataEmissao')} />
                     </div>
                     <Button className="submit" variant="outline-dark" type='submit'>Editar</Button>{' '}
+                    <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
 
                 </form>
             </main>

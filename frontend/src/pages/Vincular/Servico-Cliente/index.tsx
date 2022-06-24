@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import ICliente from '../../../interface/';
 import IServico from '../../../interface/servico';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import NavBar_ from '../../../component/NavBar'
 import { useState, useEffect, useCallback } from 'react';
@@ -14,6 +14,7 @@ interface IForm {
 }
 
 function ClienteServico() {
+    const navigate = useNavigate()
     const [cliente, setCliente] = useState<ICliente>()
     const [servico, setServicco] = useState<IServico[]>([])
     const { id } = useParams()
@@ -109,6 +110,7 @@ function ClienteServico() {
                         </select>
 
                         <Button className="submit" variant="outline-dark" type='submit'>Adicionar</Button>{' '}
+                        <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                     </form>
                 </div>
             </main>

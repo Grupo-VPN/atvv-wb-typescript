@@ -69,7 +69,7 @@ function EditarProduto() {
                     </div>
                     <div className="field">
                         <label htmlFor="Nome" >Valor do Produto:</label>
-                        <input type="text" required {...register('produto_valor')} />
+                        <input type="number" required {...register('produto_valor')} />
                     </div>
                     <Button className="submit" variant="outline-dark" type='submit'>Editar</Button>{' '}
                 </form>

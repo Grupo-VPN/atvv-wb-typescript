@@ -44,7 +44,7 @@ function CadastrarServico() {
                         </div>
                         <div className="field">
                             <label htmlFor="Preco">Preço:</label>
-                            <input type="text" {...register('servico_valor')}/>
+                            <input type="number" {...register('servico_valor')}/>
                         </div>
                         <Button className="submit" variant="outline-dark" type='submit'>Cadastrar</Button>{' '}
                     </form>

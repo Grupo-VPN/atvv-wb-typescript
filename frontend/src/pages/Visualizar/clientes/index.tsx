@@ -64,7 +64,7 @@ function VisualizarCliente() {
                         </Card.Text>
                         <Card.Text>
                             CPF: {cliente && cliente?.cpf.cpf_valor} / {cliente && cliente?.cpf.cpf_dataEmissao}
-                            <Button variant="outline-info" href={`/editar_cpf/${cliente?.cliente_id}/${cliente?.cpf.cpf_id}`}>Editar CPF</Button>{' '}
+                            <Button variant="outline-info" onClick={() => navigate(`/editar_cpf/${cliente?.cliente_id}/${cliente?.cpf.cpf_id}`)}>Editar CPF</Button>{' '}
                         </Card.Text>
                         <Card.Text>
                             {cliente && cliente?.rg.map((rg, index) => {
@@ -72,13 +72,13 @@ function VisualizarCliente() {
                                     <>
                                         <p>
                                             RG {index + 1}: - {rg.rg_valor} / {(rg.rg_dataEmissao)}
-                                            <Button variant="outline-info" href={`/editar_rg/${cliente.cliente_id}/${rg.rg_id}`}>Editar RG</Button>{' '}
+                                            <Button variant="outline-info" onClick={() => navigate(`/editar_rg/${cliente.cliente_id}/${rg.rg_id}`)}>Editar RG</Button>{' '}
                                             <Button variant="outline-info" onClick={() => deletar(rg.rg_id)}>Deletar RG</Button>{' '}
                                         </p>
                                     </>
                                 )
                             })}
-                            <Button variant="outline-info" href={`/cadastrar_rg/${cliente?.cliente_id}`}>Adicionar RG</Button>{' '}
+                            <Button variant="outline-info" onClick={() => navigate(`/cadastrar_rg/${cliente?.cliente_id}`)}>Adicionar RG</Button>{' '}
 
                         </Card.Text>
                         <Card.Text>
@@ -86,12 +86,12 @@ function VisualizarCliente() {
                                 return (
                                     <>
                                         Telefone: {tell.telefone_ddd}{' '}{tell.telefone_numero}
-                                        <Button variant="outline-info" href={`/editar_tell/${cliente.cliente_id}/${tell.telefone_id}`}>Editar Telefone</Button>{' '}
+                                        <Button variant="outline-info" onClick={() => navigate(`/editar_tell/${cliente.cliente_id}/${tell.telefone_id}`)}>Editar Telefone</Button>{' '}
                                         <Button variant="outline-info" onClick={() => deletarTell(tell.telefone_id)}>Deletar Telefone</Button>{' '}
                                         <br></br>
                                     </>)
                             })}
-                            <Button variant="outline-info" href={`/cadastrar_telefone/${cliente?.cliente_id}`}>Adicionar Telefone</Button>{' '}
+                            <Button variant="outline-info" onClick={() => navigate(`/cadastrar_telefone/${cliente?.cliente_id}`)}>Adicionar Telefone</Button>{' '}
                         </Card.Text>
                     </Card.Body>
                 </Card>

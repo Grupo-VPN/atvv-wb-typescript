@@ -92,19 +92,19 @@ function CadastrarClientes() {
                         </div>
                         <div className="field">
                             <label htmlFor="cpf">CPF:</label>
-                            <input type="text" {...register('cpf_valor')} />
+                            <input type="text" placeholder='XXX.XXX.XXX-XX' {...register('cpf_valor')} />
                         </div>
                         <div className="field">
                             <label htmlFor="cpf">CPF data de emissao:</label>
-                            <input type="text" {...register('cpf_dataEmissao')} />
+                            <input  type="date" {...register('cpf_dataEmissao')} />
                         </div>
                         <div className="field">
                             <label htmlFor="rg">RG:</label>
-                            <input type="text" {...register('rg_valor')} />
+                            <input type="text" placeholder='XX.XXX.XXX-X' {...register('rg_valor')} />
                         </div>
                         <div className="field">
                             <label htmlFor="cpf">RG data de emissao:</label>
-                            <input type="text" {...register('rg_dataEmissao')} />
+                            <input type="date"  {...register('rg_dataEmissao')} />
                         </div>
                         <div className="field">
                             <label htmlFor="Telefone">Telefone:</label>

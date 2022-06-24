@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import ICliente from '../../../interface/';
 import IProduto from '../../../interface/produto';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import NavBar_ from '../../../component/NavBar'
 import { useState, useEffect, useCallback } from 'react';
@@ -14,6 +14,7 @@ interface IForm {
 }
 
 function ClienteProduto() {
+    const navigate = useNavigate()
     const [cliente, setCliente] = useState<ICliente>()
     const [produto, setProduto] = useState<IProduto[]>([])
     const { id } = useParams()
@@ -108,6 +109,7 @@ function ClienteProduto() {
                         </select>
 
                         <Button className="submit" variant="outline-dark" type='submit'>Adicionar</Button>{' '}
+                        <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                     </form>
                 </div>
             </main>

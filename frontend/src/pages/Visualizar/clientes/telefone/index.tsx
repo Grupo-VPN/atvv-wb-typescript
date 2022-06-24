@@ -64,6 +64,7 @@ function EditarTelefone() {
                                         <input type="text" placeholder={i.telefone_ddd + ' ' + i.telefone_numero} {...register('telefone')} />
                                     </div>
                                     <Button className="submit"  variant="outline-dark" type='submit'>Editar</Button>{' '}
+                                    <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                                 </form>
                             </>
                         )

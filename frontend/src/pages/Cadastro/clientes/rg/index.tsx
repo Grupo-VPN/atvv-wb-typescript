@@ -62,7 +62,7 @@ function CadastrarRG() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="field">
                         <label htmlFor="Nome" >RG:</label>
-                        <input type="text" required {...register('rg_valor')} />
+                        <input type="text" placeholder='XX.XXX.XXX-X' required {...register('rg_valor')} />
                     </div>
                     <div className="field">
                         <label htmlFor="Nome" >Data:</label>

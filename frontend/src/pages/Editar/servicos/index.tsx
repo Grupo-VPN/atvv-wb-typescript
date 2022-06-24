@@ -71,7 +71,7 @@ function EditarServico() {
                     </div>
                     <div className="field">
                         <label htmlFor="Nome" >Valor do Serviço:</label>
-                        <input type="text" required {...register('servico_valor')} />
+                        <input type="number" required {...register('servico_valor')} />
                     </div>
                     <Button className="submit" variant="outline-dark" type='submit'>Editar</Button>{' '}
                 </form>

@@ -55,7 +55,7 @@ function CadastrarProdutos() {
                         </div>
                         <div className="field">
                             <label htmlFor="Preco">Preço:</label>
-                            <input type="text" {...register('produto_valor')} />
+                            <input type="number" {...register('produto_valor')} />
                         </div>
                         <Button className="submit" variant="outline-dark" type='submit'>Cadastrar</Button>{' '}
                     </form>

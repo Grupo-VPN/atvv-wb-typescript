@@ -70,7 +70,7 @@ function EditarRG() {
                                         <input type="date" defaultValue={i.rg_dataEmissao} required {...register('rg_dataEmissao')} />
                                     </div>
                                     <Button className="submit" variant="outline-dark" type='submit'>Editar</Button>{' '}
-
+                                    <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                                 </form>
                             </>
                         )
