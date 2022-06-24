@@ -83,18 +83,22 @@ class Cliente {
             res.json(error)
         }
     }
-    async findMany(req: Request, res: Response) {
+        async findMany(req: Request, res: Response) {
         try {
             const find = await clienteRepository
                 .createQueryBuilder()
                 .select([
                     "cli",
                     "cpf",
-                    "rg"
+                    "rg",
+                    "prod",
+                    "serv"
                 ])
                 .from(cliente, 'cli')
                 .leftJoin('cli.cpf', 'cpf')
                 .leftJoin('cli.rg', 'rg')
+                .leftJoin('cli.produtos', 'prod')
+                .leftJoin('cli.servicos', 'serv')
                 .getMany()
             res.json(find)
         } catch (error) {
