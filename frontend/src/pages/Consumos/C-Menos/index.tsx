@@ -30,8 +30,8 @@ function Consumos() {
             servicos: qntidadeServico
         })
     })
-    const ordenacao = consumidos.sort((a: { quantidade: number; }, b: { quantidade: number; }) => {
-        return a.quantidade - b.quantidade;
+    const ordenacao = consumidos.sort((a: { quantidadeTotal: number; }, b: { quantidadeTotal: number; }) => {
+        return a.quantidadeTotal - b.quantidadeTotal;
     });
     let restricao = ordenacao.slice(0, 9)
     return (
