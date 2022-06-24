@@ -24,6 +24,11 @@ import EditarTell from '../pages/Visualizar/clientes/telefone'
 import CadastrarRG from '../pages/Cadastro/clientes/rg'
 import CadatrarTelefone from '../pages/Cadastro/clientes/telefone'
 import EditarServico from '../pages/Editar/servicos';
+import ConsumoGeneros from '../pages/Consumos/C-Genero/index'
+import ConsumoValor from '../pages/Consumos/C-Valor/index'
+import ConsumoMenor from '../pages/Consumos/C-Menos/index'
+import ConsumoPSConsumido from '../pages/Consumos/C-MaiorPS/index'
+import ConsumoConsumidor from '../pages/Consumos/C-MaiorQnt/index'
 
 function AppRoutes() {
     return (
@@ -50,6 +55,11 @@ function AppRoutes() {
                 <Route path='/editar_tell/:id/:tell' element={<EditarTell/>}/>
                 <Route path='/cadastrar_rg/:id' element={<CadastrarRG/>}/>
                 <Route path='/cadastrar_telefone/:id' element={<CadatrarTelefone/>}/>
+                <Route path='/consumo_genero/' element={<ConsumoGeneros/>}/>
+                <Route path='/consumo_valor/' element={<ConsumoValor/>}/>
+                <Route path='/consumo_menor/' element={<ConsumoMenor/>}/>
+                <Route path='/consumo_psmaisconsumido/' element={<ConsumoPSConsumido/>}/>
+                <Route path='/consumo_consumidor/' element={<ConsumoConsumidor/>}/>
             </Routes>
         </Router>
     );
