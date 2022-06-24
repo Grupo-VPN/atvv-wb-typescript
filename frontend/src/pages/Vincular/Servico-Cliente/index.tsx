@@ -67,6 +67,8 @@ function ClienteServico() {
                 <NavBar_ />
             </header>
             <main>
+                <h1>Cliente : {cliente && cliente.cliente_nome}</h1>
+                <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                 <Card
                     bg="white"
                     text="dark"
@@ -92,7 +94,6 @@ function ClienteServico() {
                         })}
                     </Card.Body>
                 </Card>
-                <h1>Cliente: "{cliente?.cliente_nome}"</h1>
                 <div className="forms">
                     <form onSubmit={handleSubmit(adicionarServico)}>
                         <select
@@ -108,9 +109,7 @@ function ClienteServico() {
                                 )
                             })}
                         </select>
-
                         <Button className="submit" variant="outline-dark" type='submit'>Adicionar</Button>{' '}
-                        <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                     </form>
                 </div>
             </main>

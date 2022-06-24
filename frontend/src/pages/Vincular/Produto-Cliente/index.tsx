@@ -67,31 +67,33 @@ function ClienteProduto() {
                 <NavBar_ />
             </header>
             <main>
+                <h1>Cliente : {cliente && cliente.cliente_nome}</h1>
+                <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
+                <Card
+                    bg="white"
+                    text="dark"
+                    style={{ width: '18rem' }}
+                    className="mb-2"
+                >
+                    <Card.Header> Produtos já consumidos</Card.Header>
+                    <Card.Body>
+                        {cliente && cliente.produtos.map(s => {
+                            return (
+                                <>
 
-                {cliente && cliente.produtos.map(s => {
-                    return (
-                        <>
-                            <Card
-                                bg="white"
-                                text="dark"
-                                style={{ width: '18rem' }}
-                                className="mb-2"
-                            >
-                                <Card.Header> Produto: {s.produto_nome}</Card.Header>
-                                <Card.Body>
                                     <Card.Text>
                                         R${s.produto_valor}
                                     </Card.Text>
                                     <Card.Text>
                                         <Button onClick={() => deletar(s.produto_id)}>Deletar</Button>
                                     </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </>
-                    )
-                })}
+                                </>
+                            )
+                        })}
+                    </Card.Body>
+                </Card>
 
-                <h1>Cliente: "{cliente?.cliente_nome}"</h1>
+                <h1>Adicionar Novo Produto</h1>
                 <div className="forms">
                     <form onSubmit={handleSubmit(adicionarProduto)}>
                         <select
@@ -107,9 +109,7 @@ function ClienteProduto() {
                                 )
                             })}
                         </select>
-
                         <Button className="submit" variant="outline-dark" type='submit'>Adicionar</Button>{' '}
-                        <Button variant="outline-info" onClick={() => navigate(-1)}>Voltar</Button>{' '}
                     </form>
                 </div>
             </main>
