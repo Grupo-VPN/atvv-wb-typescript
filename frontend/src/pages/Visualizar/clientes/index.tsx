@@ -54,6 +54,7 @@ function VisualizarCliente() {
                     className="mb-2"
                 >
                     <Card.Header>ID: {cliente && cliente?.cliente_id}</Card.Header>
+                    <Card.Header>Cadastro feito em {cliente && new Date(cliente?.cliente_dataCadastro).toLocaleDateString()}</Card.Header>
                     <Card.Body>
                         <Card.Title>{cliente && cliente?.cliente_nome}</Card.Title>
                         <Card.Text>

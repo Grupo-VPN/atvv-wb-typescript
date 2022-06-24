@@ -2,7 +2,8 @@ interface ICliente {
     cliente_id: number,
     cliente_nome: string,
     cliente_nomeSocial: string,
-    cliente_genero: string
+    cliente_genero: string,
+    cliente_dataCadastro: string,
     rg: IRG[];
     cpf: ICPF;
     telefones: ITell[];
